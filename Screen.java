@@ -13,6 +13,7 @@ public class Screen{
         game.addRectangle(player);
         //Brick.populate(game);
         while(i>0){
+            /** 
             if(game.leftPressed()==true){
                 playerPosition -= 5;
             }
@@ -21,7 +22,8 @@ public class Screen{
             }
             player.setXPosition(playerPosition);
             ball.setYPosition(i);
-            ball.setXPosition(x);
+            ball.setXPosition(x)
+            */
             if (xj == 0){
                 x+=5;
             }
