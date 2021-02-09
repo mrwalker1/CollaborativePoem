@@ -3,27 +3,19 @@ public class Screen{
     public static void main(String[] args){
         int i = 1;
         int j = 0;
-        int playerPosition = 500;
         int x = 500;
         int xj = 0;
         GameArena game = new GameArena(1000,1000);
         Ball ball = new Ball(0,0,15,"BLUE",1);
         Rectangle player = new Rectangle(500,950,200,30, "Blue");
+        Player bat = new Player();
         game.addBall(ball);
         game.addRectangle(player);
         //Brick.populate(game);
         while(i>0){
-            /** 
-            if(game.leftPressed()==true){
-                playerPosition -= 5;
-            }
-            if(game.rightPressed()==true){
-                playerPosition += 5;
-            }
-            player.setXPosition(playerPosition);
+            bat.move(game,player);
             ball.setYPosition(i);
-            ball.setXPosition(x)
-            */
+            ball.setXPosition(x);
             if (xj == 0){
                 x+=5;
             }
