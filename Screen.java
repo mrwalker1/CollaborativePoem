@@ -9,29 +9,30 @@ public class Screen{
         GameArena game = new GameArena(1000,1000);
         Ball ball = new Ball(0,0,15,"BLUE",1);
         Rectangle player = new Rectangle(500,950,200,30, "Blue");
+        game.addBall(ball);
+        game.addRectangle(player);
         while(i>0){
+            
             if(game.leftPressed()==true){
-                playerPosition += 10;
+                playerPosition -= 5;
             }
-            if(game.leftPressed()==true){
-                playerPosition -= 10;
+            if(game.rightPressed()==true){
+                playerPosition += 5;
             }
             player.setXPosition(playerPosition);
             ball.setYPosition(i);
             ball.setXPosition(x);
-            game.addBall(ball);
-            game.addRectangle(player);
             if (xj == 0){
-                x++;
+                x+=5;
             }
             if (xj==1){
-                x--;
+                x-=5;
             }
             if (j == 0){
-                i++;
+                i+=5;
             }
             if (j == 1){
-                i--;
+                i-=5;
             }
             if (i>1000){
                 j = 1;
@@ -45,6 +46,7 @@ public class Screen{
             if (x<=1){
                 xj=0;
             }
+            game.pause();
         }
     }
 }
