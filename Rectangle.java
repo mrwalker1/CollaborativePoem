@@ -158,4 +158,6 @@ public class Rectangle
 	{
 		colour = c;
 	}
+
+	 
 }
